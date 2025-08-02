@@ -1,4 +1,3 @@
-```markdown
 # 🏙️ CivicTrack — TechWizards Hackathon Project
 
 **CivicTrack** is a full-stack web application for reporting, tracking, and managing civic issues in urban communities. Citizens can easily raise complaints like potholes, garbage overflow, water leakage, and more, while authorities can monitor and resolve them via a dedicated admin panel.
@@ -146,3 +145,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 Let me know if you want to add screenshots, deployment links, or contributor GitHub handles too!
 ```
+
