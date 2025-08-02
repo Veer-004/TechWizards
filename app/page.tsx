@@ -179,7 +179,7 @@ export default function HomePage() {
               </div>
               <div>
                 <h1 className="text-2xl font-poppins font-bold text-gray-900">
-                  EcoTracker
+                  CivicTrack
                 </h1>
                 <p className="text-sm text-gray-600 font-roboto">
                   Clean City Initiative
@@ -578,7 +578,7 @@ export default function HomePage() {
                   <Leaf className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-poppins font-bold">EcoTracker</h4>
+                  <h4 className="text-xl font-poppins font-bold">CivicTrack</h4>
                   <p className="text-sm text-gray-400 font-roboto">
                     Clean City Initiative
                   </p>
@@ -621,15 +621,15 @@ export default function HomePage() {
             <div>
               <h5 className="font-poppins font-semibold mb-4">Contact</h5>
               <ul className="space-y-2 font-roboto text-gray-300">
-                <li>support@ecotracker.com</li>
-                <li>+1 (555) 123-4567</li>
+                <li>support@CivicTrack.com</li>
+                <li>+91 7874636433</li>
                 <li>24/7 Community Support</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
             <p className="text-gray-400 font-roboto">
-              &copy; 2024 EcoTracker. Making cities cleaner, one report at a
+              &copy; 2024 CivicTrack. Making cities cleaner, one report at a
               time.
             </p>
           </div>
