@@ -10,6 +10,7 @@ from bson import ObjectId
 import os
 import uuid
 import logging
+from utils.category_predictor import predict_category
 from .models import User, Report
 from .serializers import (
     UserSerializer, ReportSerializer, ReportCreateSerializer,
@@ -155,13 +156,19 @@ def create_report(request):
                 image_url = request.build_absolute_uri(default_storage.url(path))
             
             # Create report
+            # Predict category using ML or rule-based logic
+            predicted_category = predict_category(serializer.validated_data['description'])
+
+            # Create report with predicted category
             report = Report.create_report(
                 user_id=str(user['_id']),
                 description=serializer.validated_data['description'],
                 latitude=serializer.validated_data['latitude'],
                 longitude=serializer.validated_data['longitude'],
-                image_url=image_url
+                image_url=image_url,
+                category=predicted_category  # 🔥 added field
             )
+
             
             # Prepare response data
             report_data = {
@@ -171,9 +178,11 @@ def create_report(request):
                 'status': report['status'],
                 'location': report['location'],
                 'image_url': report.get('image_url'),
+                'category': report.get('category'),  # 🔥 include in response
                 'created_at': report['created_at'],
                 'updated_at': report['updated_at']
             }
+
             
             return Response(report_data, status=status.HTTP_201_CREATED)
             

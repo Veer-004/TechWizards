@@ -75,7 +75,7 @@ class Report:
         except Exception as e:
             logger.error(f"Failed to archive old resolved reports: {e}")
     @classmethod
-    def create_report(cls, user_id, description, latitude, longitude, image_url=None):
+    def create_report(cls, user_id, description, latitude, longitude, image_url=None, category=None):
         try:
             report_data = {
                 'user_id': user_id,
@@ -86,10 +86,11 @@ class Report:
                     'coordinates': [float(longitude), float(latitude)]
                 },
                 'image_url': image_url,
-                'urgency_count': 0,  # Add this when creating the report
+                'urgency_count': 0,
                 'created_at': datetime.utcnow(),
                 'updated_at': datetime.utcnow(),
-                'admin_remarks': None
+                'admin_remarks': None,
+                'category': category  # ✅ Add this line
             }
             
             result = cls.collection.insert_one(report_data)
@@ -99,6 +100,7 @@ class Report:
         except Exception as e:
             logger.error(f"Failed to create report: {e}")
             raise
+
     
     @classmethod
     def get_all_reports(cls, status_filter=None, limit=100, skip=0):
