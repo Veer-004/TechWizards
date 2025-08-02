@@ -59,21 +59,21 @@ urban-waste-app/
 ### 🧩 Backend (Django)
 
 1. **Install dependencies**
-   ```bash
+   
    cd backend
    python -m venv venv
    # Activate:
    # Windows: venv\Scripts\activate
    # macOS/Linux: source venv/bin/activate
    pip install -r requirements.txt
-````
 
-2. **Environment setup**
+
+3. **Environment setup**
 
    * Copy `.env.example` → `.env`
    * Add your **MongoDB URI**, **SECRET\_KEY**, etc.
 
-3. **Run server**
+4. **Run server**
 
    ```bash
    python manage.py migrate
@@ -132,17 +132,4 @@ Team **TechWizards** – Built during \[Hackathon Name]
 * Backend: Django API, MongoDB, ML integration
 * Frontend: Next.js UI with Tailwind
 * ML: PyTorch model for issue classification
-
----
-
-## 📜 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
-```
-
----
-
-Let me know if you want to add screenshots, deployment links, or contributor GitHub handles too!
-```
 
